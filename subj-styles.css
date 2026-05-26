@@ -1,0 +1,52 @@
+/* 科目主页样式 */
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0e1a;color:#e0e6f0;min-height:100vh}
+.stars{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(2px 2px at 40px 70px,#fff,transparent);background-size:200px 100px;z-index:0}
+.wrap{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:16px}
+.back{display:inline-flex;align-items:center;gap:6px;text-decoration:none;margin-bottom:16px;font-size:.9em}
+header{text-align:center;padding:28px 16px;background:linear-gradient(135deg,#1a1f35,#0d1220);border-radius:18px;margin-bottom:20px;border:1px solid #2a3555}
+h1{font-size:1.8em;margin-bottom:6px}
+.sub{color:#94a3b8;font-size:.9em}
+.pb{background:#1e293b;border-radius:12px;height:22px;margin:14px 0;overflow:hidden;border:1px solid #334155;position:relative}
+.pf{height:100%;border-radius:12px;width:0%;transition:width .8s}
+.pt{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:.8em;font-weight:700;color:#fff}
+.mods{display:grid;gap:14px}
+.mc{background:linear-gradient(135deg,#1a1f35,#151a2e);border:1px solid #2a3555;border-radius:16px;padding:20px;cursor:pointer;transition:all .3s;display:flex;align-items:center;gap:16px;position:relative}
+.mc:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.mc.locked{opacity:.5;cursor:not-allowed;filter:grayscale(.5)}
+.mc.locked:hover{transform:none;box-shadow:none}
+.mi{width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.7em;flex-shrink:0}
+.mif{flex:1}.mit{font-size:1.05em;font-weight:600;margin-bottom:3px}.mid{color:#94a3b8;font-size:.82em;line-height:1.4}
+.mim{display:flex;gap:6px;margin-top:6px;font-size:.72em;color:#64748b}
+.mim span{background:#1e293b;padding:2px 7px;border-radius:5px;border:1px solid #334155}
+.cb{background:linear-gradient(135deg,#059669,#10b981);padding:3px 9px;border-radius:7px;font-size:.72em;font-weight:600;color:#fff;position:absolute;top:12px;right:12px}
+.lk{font-size:1.2em;color:#475569}
+.mo{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:100;align-items:center;justify-content:center}
+.mo.on{display:flex}
+.md{background:#1a1f35;border:1px solid #2a3555;border-radius:18px;padding:26px;max-width:460px;width:90%;text-align:center}
+.md h2{margin-bottom:10px}.md p{color:#94a3b8;margin-bottom:16px;line-height:1.5}
+.btn{display:inline-block;padding:11px 24px;color:#fff;border:none;border-radius:12px;font-size:.95em;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none}
+.btn:hover{transform:scale(1.05)}
+.btn-s{background:#1e293b;border:1px solid #334155;color:#e0e6f0}
+.pg{display:flex;gap:10px;justify-content:center;margin-top:16px}
+
+/* 学期分组 */
+.semester-header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;margin:20px 0 10px;border-left:4px solid #3b82f6;background:rgba(59,130,246,.05);border-radius:0 10px 10px 0}
+.semester-title{font-size:1.1em;font-weight:700}
+.semester-count{font-size:.85em;color:#94a3b8}
+
+/* 亮色主题 */
+body.light{background:#f0f4f8;color:#1e293b}
+body.light .stars{opacity:.15}
+body.light header{background:linear-gradient(135deg,#e2e8f0,#f1f5f9);border-color:#cbd5e1}
+body.light .sub{color:#64748b}
+body.light .pb{background:#e2e8f0;border-color:#cbd5e1}
+body.light .mc{background:linear-gradient(135deg,#ffffff,#f8fafc);border-color:#e2e8f0}
+body.light .mc:hover{box-shadow:0 8px 25px rgba(0,0,0,.1)}
+body.light .mid{color:#64748b}
+body.light .mim span{background:#e2e8f0;border-color:#cbd5e1;color:#64748b}
+body.light .md{background:#ffffff;border-color:#e2e8f0}
+body.light .md p{color:#64748b}
+body.light .btn-s{background:#e2e8f0;border-color:#cbd5e1;color:#1e293b}
+body.light .semester-header{background:rgba(59,130,246,.05)}
+body.light .semester-count{color:#64748b}
+body.light .back{color:#3b82f6}

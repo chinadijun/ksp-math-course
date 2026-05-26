@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>欧欧太空学习冒险</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0e1a;color:#e0e6f0;min-height:100vh;transition:background .3s,color .3s}
+.stars{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(2px 2px at 40px 70px,#fff,transparent),radial-gradient(1px 1px at 90px 40px,#fff,transparent);background-size:200px 100px;z-index:0}
+.wrap{position:relative;z-index:1;max-width:800px;margin:0 auto;padding:16px}
+header{text-align:center;padding:36px 16px 28px;background:linear-gradient(135deg,#1a1f35,#0d1220);border-radius:20px;margin-bottom:24px;border:1px solid #2a3555;transition:background .3s,border-color .3s}
+.rocket{font-size:3.5em;margin-bottom:12px;animation:float 3s ease-in-out infinite;display:inline-block}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-30deg)}50%{transform:translateY(-12px) rotate(-30deg)}}
+h1{font-size:2.2em;background:linear-gradient(135deg,#60a5fa,#a78bfa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+.sub{color:#94a3b8;font-size:.95em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.gc{background:linear-gradient(135deg,#1a1f35,#151a2e);border:2px solid #2a3555;border-radius:16px;padding:24px;cursor:pointer;transition:all .3s;text-align:center}
+.gc:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.3);border-color:#3b82f6}
+.gc .gi{font-size:2.5em;margin-bottom:10px}
+.gc .gt{font-size:1.2em;font-weight:700;margin-bottom:4px}
+.gc .gd{color:#94a3b8;font-size:.85em;line-height:1.4}
+.footer{text-align:center;margin-top:24px;color:#475569;font-size:.8em;line-height:1.6}
+.theme-btn{position:fixed;top:12px;right:12px;z-index:100;background:#1e293b;border:1px solid #334155;color:#e0e6f0;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:1.2em;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.theme-btn:hover{background:#334155;border-color:#60a5fa}
+/* 亮色主题 */
+body.light{background:#f0f4f8;color:#1e293b}
+body.light .stars{opacity:.15}
+body.light header{background:linear-gradient(135deg,#e2e8f0,#f1f5f9);border-color:#cbd5e1}
+body.light .gc{background:linear-gradient(135deg,#ffffff,#f8fafc);border-color:#e2e8f0}
+body.light .gc:hover{border-color:#3b82f6;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+body.light .gc .gd{color:#64748b}
+body.light .sub{color:#64748b}
+body.light .footer{color:#94a3b8}
+body.light .theme-btn{background:#e2e8f0;border-color:#cbd5e1;color:#1e293b}
+body.light .theme-btn:hover{background:#cbd5e1}
+</style></head><body>
+<button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+<div class="stars"></div><div class="wrap">
+<header>
+<div class="rocket">🚀</div>
+<h1>欧欧太空学习冒险</h1>
+<p class="sub">跟着小绿人Jebediah，在太空里学知识！</p>
+<p class="sub" style="color:#64748b;font-size:.85em;margin-top:4px">选择你的年级开始冒险</p>
+</header>
+<div class="grid">
+<div class="gc" onclick="location.href='g1/index.html'"><div class="gi">📗</div><div class="gt">一年级</div><div class="gd">语文·数学·英语·天文<br>基础入门</div></div>
+<div class="gc" onclick="location.href='g2/index.html'"><div class="gi">📘</div><div class="gt">二年级</div><div class="gd">语文·数学·英语·天文<br>巩固提高</div></div>
+<div class="gc" onclick="location.href='g3/index.html'"><div class="gi">📙</div><div class="gt">三年级</div><div class="gd">语文·数学·英语·天文<br>进阶挑战</div></div>
+<div class="gc" onclick="location.href='g4/index.html'"><div class="gi">📕</div><div class="gt">四年级</div><div class="gd">语文·数学·英语·天文<br>拓展提升</div></div>
+<div class="gc" onclick="location.href='g5/index.html'"><div class="gi">📓</div><div class="gt">五年级</div><div class="gd">语文·数学·英语·天文<br>综合运用</div></div>
+<div class="gc" onclick="location.href='g6/index.html'"><div class="gi">📒</div><div class="gt">六年级</div><div class="gd">语文·数学·英语·天文<br>小升初冲刺</div></div>
+<div class="gc" onclick="location.href='expand/index.html'" style="border-color:#f59e0b33"><div class="gi">🌟</div><div class="gt" style="color:#f59e0b">拓展乐园</div><div class="gd">奥数·数独·思维·唐诗·汉字·理化<br>随时可做·积分更多</div></div>
+</div>
+<div style="text-align:center;margin-top:16px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap"><a href="wrongbook.html" class="gc" id="wrongbookCard" style="display:none;padding:16px 32px;background:linear-gradient(135deg,#ef4444,#f97316);border-color:#ef4444;text-decoration:none;position:relative"><span style="font-size:1.4em">📝</span><span style="font-size:1.1em;font-weight:700;color:#fff;margin-left:8px">错题卡</span><span id="wrongCount" style="background:#fff;color:#ef4444;font-size:.8em;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:8px"></span></a><a href="shop.html" class="gc" style="display:inline-block;padding:16px 32px;background:linear-gradient(135deg,#f59e0b,#f97316);border-color:#f59e0b;text-decoration:none"><span style="font-size:1.4em">🏪</span><span style="font-size:1.1em;font-weight:700;color:#fff;margin-left:8px">积分商城</span><span id="shopPoints" style="color:#fef3c7;margin-left:8px"></span></a></div>
+<div class="footer">人教版教材配套 · 上册+下册全覆盖 · 每关15-20题<br>欧欧太空主题激发学习兴趣</div>
+<script src="wrongbook.js"></script>
+<script>
+function toggleTheme(){
+  var b=document.body;
+  b.classList.toggle('light');
+  var isLight=b.classList.contains('light');
+  localStorage.setItem('ksp-theme',isLight?'light':'dark');
+  document.getElementById('themeBtn').textContent=isLight?'🌙':'☀️';
+}
+// 加载主题
+try{
+  var th=localStorage.getItem('ksp-theme');
+  if(th==='light'){document.body.classList.add('light');document.getElementById('themeBtn').textContent='🌙';}
+}catch(e){}
+// 积分和错题
+try{var p=JSON.parse(localStorage.getItem('ksp-points')||'{}');var sp=document.getElementById('shopPoints');if(sp)sp.textContent='⭐ '+(p.total||0)+' 积分';var wc=window.KSP.wrongbook.getCount();var wcc=document.getElementById('wrongCount');var wcr=document.getElementById('wrongbookCard');if(wc>0){wcr.style.display='inline-block';wcc.textContent=wc+'题待练';}else{wcr.style.display='inline-block';wcc.textContent='0';}}catch(e){}
+</script>
+</div></body></html>

@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Capacitor build artifacts
+android/
+www/
+web/
+
+# Unrelated projects
+jd-price-monitor/
+
+# Backups and temp
+pub_old_backup/
+empty_dir/
+
+# Pre-built APK (build from source instead)
+*.apk
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code
+.claude/
